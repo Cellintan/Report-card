@@ -56,20 +56,22 @@
               <p id="score"></p>
               <script>
                   let score;
-              if (ppkn >= 0 and ppkn <= 39){
+              if (ppkn >= 0){
                   scor = "G";            
-              } else if (ppkn >= 40 and ppkn <= 49){
-                  scor = "F"
-              } else if (ppkn >= 50 and ppkn <= 59){
-                  scor = "E"
-              } else if (ppkn >= 60 and ppkn <= 69){
-                  scor = "D"
-              } else if (ppkn >= 70 and ppkn <= 79){
-                  scor = "C"
-              } else if (ppkn >= 80 and ppkn <= 89){
-                  scor = "B"
-              } else if (ppkn >= 90 and ppkn <= 100){
-                  scor = "A"
+              } else if (ppkn > 39){
+                  scor = "F";
+              } else if (ppkn > 49){
+                  scor = "E";
+              } else if (ppkn > 59){
+                  scor = "D";
+              } else if (ppkn > 69){
+                  scor = "C";
+              } else if (ppkn > 79){
+                  scor = "B";
+              } else if (ppkn > 89){
+                  scor = "A";
+              } else {
+                  scor = "A+";
               }
               document.getElementById("score").innerHTML = scor;  
               </script>
@@ -82,7 +84,7 @@
           <td>3</td>
           <td>PAK</td>
           <td><form action="/action_page.php">
-            <input type="text" id="1" name="PAK" min="0" max="100"><br>
+            <input type="text" id="2" name="PAK" min="0" max="100"><br>
             </form>
           </td>
         </tr>
@@ -90,14 +92,14 @@
           <td>4</td>
           <td>English</td>
           <td><form action="/action_page.phpEnglish">            
-              <input type="text" id="1" name="ppkn" min="0" max="100"><br>
+              <input type="text" id="4" name="ppkn" min="0" max="100"><br>
               </form>
           </td>
         </tr>
           <td>5</td>
           <td>Math</td>
           <td><form action="/action_page.php">
-            <input type="text" id="1" name="ppkn" min="0" max="100"><br>
+            <input type="text" id="5" name="ppkn" min="0" max="100"><br>
             </form>
           </td>
         </tr>
@@ -105,7 +107,7 @@
           <td>6</td>
           <td>Sejarah</td>
           <td><form action="/action_page.php">
-            <input type="text" id="1" name="Sejarah" min="0" max="100"><br>
+            <input type="text" id="6" name="Sejarah" min="0" max="100"><br>
             </form>
           </td>
         </tr>
@@ -113,8 +115,8 @@
           <td>7</td>
           <td>Social/Science</td>
           <td><form action="/action_page.php">
-            <input type="text" id="1" name="Social" min="0" max="100"><br>
-            <input type="text" id="1" name="Science" min="0" max="100"><br>
+            <input type="text" id="7a" name="Social" min="0" max="100"><br>
+            <input type="text" id="7b" name="Science" min="0" max="100"><br>
             </form>
           </td>
         </tr>
@@ -122,7 +124,7 @@
           <td>8</td>
           <td>PE</td>
           <td><form action="/action_page.php">
-            <input type="text" id="1" name="PE" min="0" max="100"><br>
+            <input type="text" id="8" name="PE" min="0" max="100"><br>
             </form>
           </td>
         </tr>
@@ -131,29 +133,38 @@
           <td>Spiritual and Character</td>
           <td>
               <form action="/action_page.php">
-                <input type="text" id="1" name="PE" min="0" max="100"><br>
+                <input type="text" id="9" name="PE" min="0" max="100"><br>
               </form>
           </td>
-          <td>13</td>
-          <td>Mandarin</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Computing</td>
           <td><form action="/action_page.php">
-            <input type="text" id="1" name="Mandarin" min="0" max="100"><br>
+            <input type="text" id="13" name="Mandarin" min="0" max="100"><br>
           </td>
-        </tr>        
+        </tr> 
+        <tr>       
           <td>11</td>
           <td>Business</td>
           <td><form action="/action_page.php">
-            <input type="text" id="1" name="Business" min="0" max="100"><br>
+            <input type="text" id="11" name="Business" min="0" max="100"><br>
           </td>
         </tr>
+        <tr>       
+            <td>12</td>
+            <td>Life Skill</td>
+            <td><form action="/action_page.php">
+              <input type="text" id="11" name="Business" min="0" max="100"><br>
+            </td>
+          </tr>
+          <tr>       
+            <td>13</td>
+            <td>Mandarin</td>
+            <td><form action="/action_page.php">
+              <input type="text" id="11" name="Business" min="0" max="100"><br>
+            </td>
+          </tr>
 </body>
-
-  <form action="/action_page.php">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="Submit">
-  </form>
 </html>
 
